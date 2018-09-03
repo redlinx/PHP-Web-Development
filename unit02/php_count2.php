@@ -1,6 +1,6 @@
 <?php
 
-include_once "php_count.php";
+include_once "array_part1.php";
 
 
 for($x=0;$x<count($student);$x++){
