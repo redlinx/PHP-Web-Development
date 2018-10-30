@@ -8,7 +8,6 @@ Class Student
 	}
 }
 
-
 $student = new Student();
 $student->display_student_name();
 
