@@ -1,27 +1,32 @@
 <?php
 
-$sql = 'SELECT * FROM Student';
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$db = 'election';
+$sql = 'SELECT * FROM account';
 
-$mysqli = new mysqli('', '', '', '');
+$accounts = new mysqli($host,$username,$password,$db);
 
-$mysqli->real_query($sql);
+$accounts->real_query($sql);
 
-$result = $mysqli->use_result();
+$result = $accounts->use_result();
 
 $ctr = 0;
-while($row = $result->fetch_row()){
-	$student[$ctr][0] = $row[0];
-	$student[$ctr][1] = $row[1];
-	$student[$ctr][2] = $row[2];
-	$student[$ctr][3] = $row[3];
-	$student[$ctr][4] = $row[4];
-	$student[$ctr][5] = $row[5];
-	$student[$ctr][6] = $row[6];
+while ($row = $result->fetch_row()) {
+	$student_account[$ctr][0] = $row[0];
+	$student_account[$ctr][1] = $row[1];
+	$student_account[$ctr][2] = $row[2];
+	$student_account[$ctr][3] = $row[3];
+	$student_account[$ctr][4] = $row[4];
+	$student_account[$ctr][5] = $row[5];
 	$ctr++;
 }
 
-$mysqli->close();
+echo "<pre>";
+print_r($student_account);
+echo "</pre>";
 
-print_r($student);
+
 
 ?>
