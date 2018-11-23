@@ -25,7 +25,7 @@ echo "<table border = 1 >";
 		echo "<th>Mobile Number</th>";
 		echo "<th>Degree Program</th>";
 		echo "<th>School</th>";
-		// echo "<th>Update</th>";
+		echo "<th>Update</th>";
 	echo "</tr>";
 
 	$total_count_number = 0;
@@ -40,16 +40,16 @@ echo "<table border = 1 >";
 			echo "<td>".$student_list[$ctr][3]."</td>";
 			echo "<td>".$student_list[$ctr][4]."</td>";
 			echo "<td>".$student_list[$ctr][5]."</td>";
-			echo "<td>".$student_list[$ctr][6]."</td>"; 
+			echo "<td>".$student_list[$ctr][7]."</td>"; 
 			echo "<td>".$student_list[$ctr][8]."</td>"; 
-			/*
+			
 			echo '<td align = "Center"><a href="update_form.php?id='.$student_list[$ctr][0].'
 						&username='.$student_list[$ctr][1].'
 						&lastname='.$student_list[$ctr][2].'
 						&firstname='.$student_list[$ctr][3].'
 						&middlename='.$student_list[$ctr][4].'
 						&email='.$student_list[$ctr][5].'">Update</a></td>'; 
-			*/
+			
 
 		echo "</tr>";
 	}

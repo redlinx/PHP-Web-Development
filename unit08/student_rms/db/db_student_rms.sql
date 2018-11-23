@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 23, 2018 at 08:25 AM
+-- Generation Time: Nov 23, 2018 at 11:37 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -34,8 +34,8 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `display_students` ()  BEGIN
 		s.stud_mname,
 		s.stud_email,
 		s.stud_mob_no,
-		p.prog_desc,
-		c.col_name, 
+		s.stud_bday,
+		p.prog_desc, 
 		u.univ_name,
 		u.univ_address
 	FROM student s,program p, college c, university u, academic_degree_level adl
@@ -165,11 +165,32 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`stud_id`, `stud_lname`, `stud_fname`, `stud_mname`, `stud_email`, `stud_mob_no`, `stud_bday`, `prog_id`, `date_time_log`) VALUES
-(1, 'Padao', 'Francis Rey', 'Francisquete', 'francisreypadao@gmail.com', '09776920392', '1988-09-11', 11, '2018-11-06 06:11:29'),
+(1, 'Padao', 'Francis Rey', 'Francisquete', 'francisreypadao@gmail.com', '09776920392', '1988-09-11', 9, '2018-11-06 06:11:29'),
 (4, 'Orano', 'Jannie Fleur', 'Villar', 'janniefleur@gmail.com', '09171234567', '2018-11-23', 2, '2018-11-23 08:54:59'),
 (22, 'Orano', 'David', 'Fernandez', 'oranyo@gmail.com', '09361220070', '1992-11-10', 1, '2018-11-23 13:44:25'),
 (23, 'Dagale', 'Marnife', 'Vallejos', 'dagale.marnife.vallejos@gmail.com', '09361231234', '1992-03-06', 1, '2018-11-23 14:10:33'),
-(24, 'Malangsa', 'Rhoderick', 'Dargantes', 'Rhojud@yahoo.com', '09171234567', '2018-11-23', 9, '2018-11-23 15:03:27');
+(24, 'Malangsa', 'Rhoderick', 'Dargantes', 'Rhojud@yahoo.com', '09171234567', '2018-11-23', 9, '2018-11-23 15:03:27'),
+(25, 'Auguis', 'Jhuniever', 'Juarbal', 'jhuniverjuarbalauguis@gmail.com', '09364900535', '1998-05-29', 1, '2018-11-23 16:37:53'),
+(26, 'Rarangol', 'Jessa Mae', 'L', 'jessamaerarangol7@gmail.com', '09553144367', '1998-08-26', 1, '2018-11-23 16:38:02'),
+(27, 'Abrio', 'Criscelia', 'Paguyo', 'abriocriscelia@gmail.com', '09974167198', '1999-05-05', 1, '2018-11-23 16:38:35'),
+(28, 'Dikit', 'Jemarie', 'Timbal', 'dikitjemarie@gmail.com', '09757753868', '1999-11-01', 1, '2018-11-23 16:38:52'),
+(29, 'Malbas', 'Ranil', 'Diada', 'lenarsmalbas@gmail.com', '09651331005', '1995-10-03', 1, '2018-11-23 16:39:08'),
+(30, 'Templa', 'Mary Girlie', 'Cortan', 'templagirlie@gmail.com', '09350625570', '1997-12-30', 1, '2018-11-23 16:39:12'),
+(31, 'Garong', 'Junrie', 'G.', 'junriegarong456@gmail.com', '09757743246', '1998-06-16', 1, '2018-11-23 16:39:25'),
+(32, 'Ligutan', 'Kenneth', 'Duma-op', 'liguta41@gmail.com', '09654882375', '1996-04-12', 1, '2018-11-23 16:39:34'),
+(33, 'Busa', 'Vanessa', 'Glario', 'vanessabusa.vb@gmail.com', '09566254665', '1997-08-05', 1, '2018-11-23 16:39:44'),
+(34, 'Abrigo', 'Novie Marie', 'Palomar', 'noviemarieabrigo@gmail.com', '09978848830', '1998-11-11', 1, '2018-11-23 16:39:53'),
+(35, 'Keliste', 'Reina', 'Maylim', 'kreinamaylim@gmail.com', '09351171067', '1998-01-22', 1, '2018-11-23 16:39:59'),
+(36, 'Lucilo', 'Rachel Ann', 'Heling', 'rachelannhelinglucilo@gmail.com', '09651342665', '1995-11-15', 1, '2018-11-23 16:40:01'),
+(37, 'Rodriguez', 'Joedee Mark', 'Aralan', 'joedeemark1995@gmail.com', '09651777366', '1995-01-20', 1, '2018-11-23 16:40:07'),
+(38, 'Salon', 'Maria Ethel', 'Agravante', 'ethelagravante@gmail.com', '09365414407', '1997-03-10', 1, '2018-11-23 16:40:28'),
+(39, 'Valenzona', 'Mark Anthony', 'Ramis', 'mav_bello@yahoo.com', '09268322823', '1996-06-13', 1, '2018-11-23 16:40:44'),
+(40, 'Talabo', 'Nikke', 'Irinco', 'nikniktab1@gmail.com', '09554211323', '1998-10-10', 1, '2018-11-23 16:41:10'),
+(41, 'Mabahin', 'Virgelio Jr.', 'Ollado', 'verlmabahin@gmail.com', '09168861220', '1996-07-31', 1, '2018-11-23 16:41:43'),
+(42, 'Obbus', 'Rocelle', 'Galing', 'ros_obbus@yahoo.com', '09651776017', '1995-03-16', 1, '2018-11-23 16:42:57'),
+(43, 'chua', 'mj', 'lee', 'mjchualee@outlook.com', '09300758171', '1996-01-29', 1, '2018-11-23 16:45:30'),
+(44, 'imus-chua', 'mj', 'lee', 'mjchualee@outlook.com', '09300758171', '1999-01-29', 1, '2018-11-23 16:47:36'),
+(45, 'Sy', 'Keano Nikko', 'L', 'test@test.com', '09171234567', '2018-11-23', 1, '2018-11-23 18:31:59');
 
 -- --------------------------------------------------------
 
@@ -257,7 +278,7 @@ ALTER TABLE `program`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `stud_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- AUTO_INCREMENT for table `university`
 --
