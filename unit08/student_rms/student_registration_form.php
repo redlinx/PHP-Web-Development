@@ -31,9 +31,14 @@
 	</tr>
 
 	<tr>
+		<td>Birthday</td>
+	</tr>
+	
+	<tr>
 		<!-- <td>Birthday</td> -->
 		<td><input type="date" name="stud_bday" value="" required></td>
 	</tr>
+	
 
 	<tr>
 		<td><input type="submit" name="submit" value="save"></td>
